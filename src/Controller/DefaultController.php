@@ -11,8 +11,8 @@ class DefaultController extends AbstractController
     #[Route('//', name: 'app_index')]
     public function index(): Response
     {
-        return new Response(
-            '<html><body><h1>Bienvenue !</h1></body></html>'
-        );
+        return $this->render('home.html.twig', [
+            'home' => 'Bienvenue !',
+        ]);
     }
 }
